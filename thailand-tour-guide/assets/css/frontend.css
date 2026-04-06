@@ -1,0 +1,700 @@
+/**
+ * Frontend Styles for Thailand Tour Guide
+ */
+
+/* Container */
+.ttg-tour-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Filters */
+.ttg-filters {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ttg-filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.ttg-filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.ttg-filter-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ttg-filter-select:hover {
+    border-color: #0066cc;
+}
+
+.ttg-filter-select:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.ttg-filter-button,
+.ttg-reset-button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.ttg-filter-button {
+    background: #0066cc;
+    color: white;
+}
+
+.ttg-filter-button:hover {
+    background: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.ttg-reset-button {
+    background: #6c757d;
+    color: white;
+}
+
+.ttg-reset-button:hover {
+    background: #545b62;
+}
+
+/* Tours Grid */
+.ttg-tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Tour Card */
+.ttg-tour-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.ttg-tour-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.ttg-tour-thumbnail {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ttg-tour-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.ttg-tour-card:hover .ttg-tour-thumbnail img {
+    transform: scale(1.05);
+}
+
+.ttg-tour-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ttg-tour-header {
+    margin-bottom: 15px;
+}
+
+.ttg-tour-title {
+    margin: 0 0 12px 0;
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.ttg-tour-title a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ttg-tour-title a:hover {
+    color: #0066cc;
+}
+
+.ttg-tour-meta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #666;
+}
+
+.ttg-tour-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ttg-tour-meta svg {
+    flex-shrink: 0;
+}
+
+.ttg-tour-excerpt {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Itinerary Preview */
+.ttg-tour-itinerary-preview {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.ttg-tour-itinerary-preview h4 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.ttg-itinerary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ttg-itinerary-list li {
+    display: flex;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.ttg-itinerary-list li:last-child {
+    border-bottom: none;
+}
+
+.ttg-itinerary-thumb {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.ttg-itinerary-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ttg-itinerary-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ttg-time {
+    color: #0066cc;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.ttg-more-stops {
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 0 8px 0 !important;
+    border: none !important;
+}
+
+/* Tour Footer */
+.ttg-tour-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.ttg-tour-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.ttg-price-label {
+    font-size: 13px;
+    color: #666;
+}
+
+.ttg-price-amount {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0066cc;
+    line-height: 1.2;
+}
+
+.ttg-price-unit {
+    font-size: 13px;
+    color: #666;
+}
+
+.ttg-customizable-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: #e8f4f8;
+    color: #0066cc;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ttg-view-details {
+    padding: 10px 24px;
+    background: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.ttg-view-details:hover {
+    background: #0052a3;
+    transform: translateY(-2px);
+}
+
+/* Loading Spinner */
+.ttg-loading {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0066cc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* No Tours Found */
+.no-tours-found {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+/* Single Tour Page */
+.ttg-single-tour {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ttg-tour-hero {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.ttg-hero-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.ttg-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ttg-hero-content {
+    padding: 30px 0;
+}
+
+.ttg-hero-content .ttg-tour-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.ttg-tour-meta-info {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.ttg-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+}
+
+/* Tour Body */
+.ttg-tour-body {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.ttg-tour-main {
+    min-width: 0;
+}
+
+.ttg-tour-description {
+    margin-bottom: 40px;
+}
+
+.ttg-tour-description h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Itinerary Timeline */
+.ttg-tour-itinerary-full {
+    margin-bottom: 40px;
+}
+
+.ttg-tour-itinerary-full h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.ttg-itinerary-timeline {
+    position: relative;
+    padding-left: 60px;
+}
+
+.ttg-itinerary-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #0066cc, #00ccff);
+}
+
+.ttg-itinerary-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.ttg-itinerary-marker {
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: #0066cc;
+    border: 4px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);
+}
+
+.ttg-marker-number {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.ttg-itinerary-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.ttg-itinerary-time {
+    color: #0066cc;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.ttg-itinerary-location {
+    font-size: 22px;
+    margin: 0 0 15px 0;
+    color: #222;
+}
+
+.ttg-itinerary-image {
+    margin: 15px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ttg-itinerary-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ttg-itinerary-description {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Customization Note */
+.ttg-customization-note {
+    background: linear-gradient(135deg, #e8f4f8 0%, #f0f8ff 100%);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #0066cc;
+}
+
+.ttg-note-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.ttg-note-header svg {
+    color: #0066cc;
+}
+
+.ttg-note-header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #0066cc;
+}
+
+/* Booking Sidebar */
+.ttg-tour-sidebar {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.ttg-booking-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.ttg-price-section {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.ttg-price-from {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.ttg-price-section .ttg-price-amount {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0066cc;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.ttg-price-section .ttg-price-unit {
+    font-size: 14px;
+    color: #666;
+}
+
+.ttg-customizable-info {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.ttg-customizable-info svg {
+    flex-shrink: 0;
+    color: #0066cc;
+}
+
+.ttg-contact-button {
+    width: 100%;
+    padding: 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.ttg-contact-button:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.ttg-tour-features h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.ttg-tour-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ttg-tour-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.ttg-tour-features svg {
+    color: #28a745;
+    flex-shrink: 0;
+}
+
+/* Archive Page */
+.ttg-archive-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ttg-archive-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ttg-archive-header h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.ttg-archive-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ttg-filters {
+        flex-direction: column;
+    }
+
+    .ttg-filter-group {
+        width: 100%;
+    }
+
+    .ttg-tours-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ttg-tour-body {
+        grid-template-columns: 1fr;
+    }
+
+    .ttg-tour-sidebar {
+        position: static;
+    }
+
+    .ttg-hero-content .ttg-tour-title {
+        font-size: 28px;
+    }
+
+    .ttg-itinerary-timeline {
+        padding-left: 40px;
+    }
+
+    .ttg-itinerary-marker {
+        left: -40px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .ttg-marker-number {
+        font-size: 14px;
+    }
+
+    .ttg-tour-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ttg-view-details {
+        width: 100%;
+    }
+}
