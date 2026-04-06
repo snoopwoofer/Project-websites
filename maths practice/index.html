@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Maths Drill - Practice for Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div id="homeScreen" class="screen active">
+            <h1>Case Maths Drill</h1>
+            <p class="subtitle">Master your consulting case interview calculations</p>
+
+            <div class="selection-panel">
+                <div class="selection-group">
+                    <h2>Select Difficulty</h2>
+                    <div class="button-group">
+                        <button class="option-btn difficulty-btn" data-difficulty="easy">Easy</button>
+                        <button class="option-btn difficulty-btn" data-difficulty="medium">Medium</button>
+                        <button class="option-btn difficulty-btn" data-difficulty="hard">Hard</button>
+                    </div>
+                </div>
+
+                <div class="selection-group">
+                    <h2>Select Duration</h2>
+                    <div class="button-group">
+                        <button class="option-btn duration-btn" data-duration="60">1 min</button>
+                        <button class="option-btn duration-btn" data-duration="180">3 min</button>
+                        <button class="option-btn duration-btn" data-duration="300">5 min</button>
+                        <button class="option-btn duration-btn" data-duration="600">10 min</button>
+                    </div>
+                </div>
+
+                <button id="startBtn" class="start-btn" disabled>Start Challenge</button>
+            </div>
+
+            <div class="history-section">
+                <h2>Your History</h2>
+                <div id="historyList" class="history-list"></div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="screen">
+            <div class="quiz-header">
+                <div class="quiz-info">
+                    <span class="difficulty-badge" id="difficultyBadge"></span>
+                    <span class="question-counter" id="questionCounter">Question 1</span>
+                </div>
+                <div class="timer" id="timer">0:00</div>
+            </div>
+
+            <div class="quiz-content">
+                <div class="question-box">
+                    <p class="question-text" id="questionText"></p>
+                </div>
+
+                <div class="answer-section">
+                    <input type="number" id="answerInput" class="answer-input" placeholder="Enter your answer" step="any">
+                    <button id="submitBtn" class="submit-btn">Submit</button>
+                </div>
+
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="screen">
+            <h1>Challenge Complete!</h1>
+
+            <div class="results-summary">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalQuestions">0</div>
+                    <div class="stat-label">Total Questions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="correctAnswers">0</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="accuracyPercent">0%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+            </div>
+
+            <div class="wrong-answers" id="wrongAnswersSection">
+                <h2>Questions to Review</h2>
+                <div id="wrongAnswersList"></div>
+            </div>
+
+            <div class="results-actions">
+                <button id="retryBtn" class="action-btn">Try Again</button>
+                <button id="homeBtn" class="action-btn secondary">Back to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
